@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cloverTest.DriverProfilePage">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical">
+            <StackLayout>
+                <Label x:Name="label" Text="Welcome to Driver Profile !"
+                VerticalOptions="Center" 
+                HorizontalOptions="CenterAndExpand" FontSize="30" FontAttributes="Bold" Margin="20,10,20,20"/>
+
+                <!-- Labels  -->
+                <StackLayout VerticalOptions="FillAndExpand" Margin="20" >
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,5" >
+                        <Label Text="Nickname : " FontSize="15" FontAttributes="Bold" ></Label>
+                        <Label x:Name="nicknameLabel" FontSize="15"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
+                        <Label Text="Id : " FontSize="15" FontAttributes="Bold"></Label>
+                        <Label x:Name="idLabel" FontSize="15"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
+                        <Label Text="Email : " FontSize="15" FontAttributes="Bold"></Label>
+                        <Label x:Name="emailLabel" FontSize="15"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
+                        <Label Text="Pin : " FontSize="15" FontAttributes="Bold"></Label>
+                        <Label x:Name="pinLabel" FontSize="15"></Label>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal" Margin="0,0,0,5">
+                        <Label Text="Role : " FontSize="15" FontAttributes="Bold"></Label>
+                        <Label x:Name="roleLabel" FontSize="15"></Label>
+                    </StackLayout>
+                </StackLayout>
+
+                <Button Text="Edit" Clicked="editBtnClicked" VerticalOptions="End" Margin="80,0,80,5"></Button>
+                <Button Text="Logout" Clicked="LogoutBtnClicked" VerticalOptions="End" Margin="80,0,80,20"></Button>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cloverTest.Pages.NewTripPage">
+    <ContentPage.Content>
+        <ScrollView Orientation="Vertical" HorizontalOptions="FillAndExpand">
+        <StackLayout HorizontalOptions="FillAndExpand">
+            <Label x:Name="tripNameLabel"
+                Text="Trip Name"
+                   VerticalOptions="Start"
+                   HorizontalOptions="CenterAndExpand"
+                   FontSize="30" FontAttributes="Bold" Margin="20,10,20,10"/>
+            <StackLayout HorizontalOptions="FillAndExpand" >
+                <StackLayout Orientation="Horizontal" Margin="10,10,10,10">
+                    <Label Text="Base Fares : " FontSize="20" VerticalTextAlignment="Center"></Label>
+                    <Entry x:Name="baseFaresEntry" Text="50 " FontSize="20" VerticalTextAlignment="Center" TextChanged="baseFaresChanged"></Entry>
+                    <Label Text="$" VerticalTextAlignment="Center"></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10" >
+                    <Label Text="Tolls : " FontSize="20" VerticalOptions="Center" VerticalTextAlignment="Center"></Label>
+                    <StackLayout Orientation="Vertical" Padding="0" WidthRequest="35" Spacing="0" Margin="5">
+                        <Button x:Name="addBtn" Text="+" FontAttributes="Bold" Margin="0" BorderWidth="0.5" BorderColor="Black" Clicked="addTollsBtnClicked" HeightRequest="35" ></Button>
+                        <Button x:Name="subBtn" Text="-" FontAttributes="Bold" Margin="0" BorderWidth="0.5" BorderColor="Black" Clicked="subTollsBtnClicked" HeightRequest="35"></Button>
+                    </StackLayout>
+                    <Entry x:Name="tollsEntry" Text="0 " FontSize="20" VerticalOptions="Center"></Entry>
+                    <Label Text="$" VerticalTextAlignment="Center" VerticalOptions="Center" ></Label>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="10,10,5,10" Padding="0" HorizontalOptions="FillAndExpand" Spacing="0" >
+                        <Label Text="Tips : " FontSize="20" VerticalTextAlignment="Center" Margin="0,0,0,0" HorizontalOptions="FillAndExpand" MaxLines="1"></Label>
+                            <Button x:Name="tips20Btn" Text="20 %" Clicked="tips20BtnClicked" Margin="0" BorderColor="Black" BorderWidth="0.1"  ></Button>
+                            <Button x:Name="tips25Btn" Text="25 %" Clicked="tips25BtnClicked"  Margin="0" BorderColor="Black" BorderWidth="0.1"  ></Button>
+                            <Button x:Name="tips30Btn" Text="30 %" Clicked="tips30BtnClicked"  Margin="0" BorderColor="Black" BorderWidth="0.1"  ></Button>
+                    </StackLayout>
+                <!--<StackLayout Orientation="Horizontal" Margin="10">
+                        <Label Text="Processing Fees : " FontSize="20" VerticalTextAlignment="Center"></Label>
+                    <Label x:Name="processingFeesLabel" Text="3 " FontSize="20"></Label>
+                    <Label Text="$" VerticalTextAlignment="Center"></Label>
+                </StackLayout>-->
+                <BoxView BackgroundColor="Black" HeightRequest="1" Margin="10,30,80,20" ></BoxView>
+                <StackLayout Orientation="Horizontal" Margin="5,5,5,20">
+                    <Label Text="Total Before Fees : " FontSize="20" VerticalTextAlignment="Center"></Label>
+                    <Label x:Name="totalLabel" Text="50 " FontSize="20"></Label>
+                    <Label Text="$" VerticalTextAlignment="Center"></Label>
+                </StackLayout>
+            </StackLayout>
+            <Button  Text="Finish Trip" Clicked="finishTripClicked" Margin="80,0,80,20" VerticalOptions="EndAndExpand"></Button>
+                <!--<Button  Text="Pay" Clicked="payClicked" Margin="80,0,80,20" VerticalOptions="EndAndExpand" IsEnabled="False"></Button>-->
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cloverTest.PaymentPage">
+    <ContentPage.Content>
+            <StackLayout Orientation="Vertical" Spacing="20" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5,0,0,-10">
+                    <Label Text="Credit Card : " HorizontalOptions="Center" VerticalTextAlignment="Center" FontSize="20"></Label>
+                    <Entry x:Name="ccnumber"  HorizontalOptions="Fill"  VerticalTextAlignment="Center" Text="6011361000006668"></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5,0,0,-10">
+                    <Label Text="Expiration Month :" VerticalTextAlignment="Center" FontSize="20"></Label>
+                    <Entry x:Name="expMonthEntry" Text="5"  VerticalTextAlignment="Center" ></Entry>
+
+
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5,0,0,-10">
+                    <Label Text="Expiration Year: " VerticalTextAlignment="Center" FontSize="20"></Label>
+                    <Entry x:Name="expYearEntry" Text="21" VerticalTextAlignment="Center" ></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5,0,0,-10">
+                    <Label Text="CVV : "  VerticalTextAlignment="Center" FontSize="20"></Label>
+                    <Entry x:Name="cvvEntry" Text="123" HorizontalOptions="Fill"  VerticalTextAlignment="Center" ></Entry>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand" HorizontalOptions="Start" Margin="5,0,0,-10">
+                    <Label Text="Total Payment : " HorizontalOptions="Center" VerticalTextAlignment="Center" FontSize="20"></Label>
+                    <Label x:Name="amountLabel" Text="60" HorizontalOptions="Fill"  VerticalTextAlignment="Center" ></Label>
+                    <Label Text="Cents" HorizontalOptions="Center" VerticalTextAlignment="Center" ></Label>
+                </StackLayout>
+
+                <Button Text="Pay" Clicked="PayBtnClicked" VerticalOptions="Center" Margin="80,0,80,0" ></Button>
+            </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

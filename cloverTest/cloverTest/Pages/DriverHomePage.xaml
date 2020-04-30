@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="cloverTest.DriverHomePage">
+  
+    <ContentPage.Content>
+        <StackLayout>
+        <StackLayout>
+                <ListView x:Name="tripsListview"
+                          VerticalOptions="CenterAndExpand"
+                          HorizontalOptions="CenterAndExpand"
+                          ItemsSource="{Binding Trips}" ItemSelected="onTripClicked" >
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding tripName}"/>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            
+            <Button Text="Add New Trip" Clicked="addNewTripBtnClicked" Margin="80,0,80,20"></Button>
+        </StackLayout>
+            <Button VerticalOptions="EndAndExpand" Text="Go to profile" Clicked="goToProfileBtnClicked" Margin="80,0,80,20"></Button>
+            <Button Text="Logout" Clicked="LogoutBtnClicked" VerticalOptions="End" Margin="80,0,80,20"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
